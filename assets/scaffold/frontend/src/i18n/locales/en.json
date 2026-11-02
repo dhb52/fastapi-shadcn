@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "FastAPI + shadcn"
+  },
+  "language": {
+    "switch": "Switch language",
+    "en": "English",
+    "zh": "中文"
+  },
+  "config": {
+    "loading": "loading configuration...",
+    "environment": "environment: {{environment}}",
+    "errorTitle": "Backend unavailable",
+    "errorFallback": "Unable to load configuration"
+  },
+  "captcha": {
+    "disabledTitle": "Captcha disabled",
+    "disabledDescription": "Disabled by default in development; enable it in production with CAPTCHA_ENABLED=true.",
+    "imageAlt": "Captcha image",
+    "refresh": "Refresh captcha",
+    "refreshing": "Refreshing...",
+    "label": "Captcha",
+    "placeholder": "Enter the characters in the image",
+    "loadFailed": "Failed to load captcha",
+    "verify": "Verify",
+    "verifySuccess": "Captcha correct",
+    "verifyInvalid": "Captcha incorrect",
+    "verifyFailed": "Verification failed"
+  },
+  "api": {
+    "requestFailed": "Request failed ({{status}})"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "app": {
+    "title": "FastAPI + shadcn"
+  },
+  "language": {
+    "switch": "切换语言",
+    "en": "English",
+    "zh": "中文"
+  },
+  "config": {
+    "loading": "正在加载配置...",
+    "environment": "环境：{{environment}}",
+    "errorTitle": "后端不可用",
+    "errorFallback": "无法读取配置"
+  },
+  "captcha": {
+    "disabledTitle": "验证码已关闭",
+    "disabledDescription": "开发环境默认关闭，生产环境通过 CAPTCHA_ENABLED=true 开启。",
+    "imageAlt": "验证码",
+    "refresh": "刷新验证码",
+    "refreshing": "刷新中...",
+    "label": "验证码",
+    "placeholder": "输入图片中的字符",
+    "loadFailed": "验证码加载失败",
+    "verify": "验证",
+    "verifySuccess": "验证码正确",
+    "verifyInvalid": "验证码错误",
+    "verifyFailed": "验证失败"
+  },
+  "api": {
+    "requestFailed": "请求失败（{{status}}）"
+  }
+}

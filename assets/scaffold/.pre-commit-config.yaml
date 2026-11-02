@@ -1,0 +1,45 @@
+repos:
+  - repo: local
+    hooks:
+      - id: backend-ruff-check
+        name: backend ruff check
+        entry: uv run --frozen --directory backend ruff check --force-exclude --fix --exit-non-zero-on-fix app tests alembic
+        language: system
+        pass_filenames: false
+        files: ^backend/.*\.py$
+        require_serial: true
+
+      - id: backend-ruff-format
+        name: backend ruff format
+        entry: uv run --frozen --directory backend ruff format app tests alembic
+        language: system
+        pass_filenames: false
+        files: ^backend/.*\.py$
+        require_serial: true
+
+      - id: backend-mypy
+        name: backend mypy
+        entry: uv run --frozen --directory backend mypy app
+        language: system
+        pass_filenames: false
+        files: ^backend/.*\.py$
+        require_serial: true
+
+      - id: frontend-biome
+        name: frontend biome
+        entry: >-
+          bash -c 'cd frontend && ./node_modules/.bin/biome check --write
+          --no-errors-on-unmatched --files-ignore-unknown=true
+          "${@#frontend/}"' --
+        language: system
+        files: ^frontend/
+        exclude: ^frontend/(src/components/ui|node_modules)/
+        require_serial: true
+
+      - id: frontend-typecheck
+        name: frontend typecheck
+        entry: bash -c 'cd frontend && ./node_modules/.bin/tsc -p tsconfig.json --noEmit'
+        language: system
+        pass_filenames: false
+        files: ^frontend/
+        require_serial: true
